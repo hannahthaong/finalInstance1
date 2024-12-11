@@ -1,12 +1,14 @@
 import discord
 import os
 import random
+from dotenv import load_dotenv
 from ec2_metadata import ec2_metadata
 
 print(ec2_metadata.region)
 print(ec2_metadata.instance_id)
 
 #load enviroment variables
+load_dotenv()
 client = discord.Client()
 token = os.getenv('TOKEN')
 
